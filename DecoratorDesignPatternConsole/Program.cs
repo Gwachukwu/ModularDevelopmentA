@@ -2,9 +2,9 @@
 using DecoratorDesignPatternConsole.Interfaces;
 
 IComponent<string> concreteComponent = new ConcreteComponent();
-IComponent<string> colorDecorator = new ColorDecorator(concreteComponent);
-IComponent<string> plainDecorator = new PlainDecorator(concreteComponent);
-IComponent<string> UpperCaseDecorator = new UpperCaseDecorator(concreteComponent);
+ColorDecorator colorDecorator = new(concreteComponent);
+PlainDecorator plainDecorator = new(concreteComponent);
+UpperCaseDecorator UpperCaseDecorator = new(concreteComponent);
 
 Console.WriteLine(concreteComponent.GetText());
 Console.WriteLine(colorDecorator.GetText());

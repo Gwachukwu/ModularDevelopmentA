@@ -1,7 +1,6 @@
-namespace DecoratorDesignPatternConsole.Interfaces
+namespace DecoratorDesignPatternConsole.Interfaces;
+
+public interface IComponent<T>
 {
-    public interface IComponent<T>
-    {
-        T GetText();
-    }
+    T GetText();
 }

@@ -1,18 +1,17 @@
+namespace DecoratorDesignPatternConsole.Classes;
+
 using DecoratorDesignPatternConsole.Interfaces;
 
-namespace DecoratorDesignPatternConsole.Classes
+public abstract class Decorator<T> : IComponent<T>
 {
-    public abstract class Decorator<T> : IComponent<T>
+    protected IComponent<T> component;
+    public Decorator(IComponent<T> component)
     {
-        protected IComponent<T> component;
-        public Decorator(IComponent<T> component)
-        {
-            this.component = component;
-        }
+        this.component = component;
+    }
 
-        public virtual T GetText()
-        {
-            return component.GetText();
-        }
+    public virtual T GetText()
+    {
+        return component.GetText();
     }
 }

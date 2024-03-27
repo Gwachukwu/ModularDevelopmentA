@@ -1,16 +1,15 @@
+namespace DecoratorDesignPatternConsole.Classes;
+
 using DecoratorDesignPatternConsole.Interfaces;
 
-namespace DecoratorDesignPatternConsole.Classes
+public class PlainDecorator : Decorator<string>
 {
-    public class PlainDecorator : Decorator<string>
+    public PlainDecorator(IComponent<string> component) : base(component)
     {
-        public PlainDecorator(IComponent<string> component) : base(component)
-        {
 
-        }
-        public override string GetText()
-        {
-            return "My name is Gwachukwu. " + base.GetText();
-        }
+    }
+    public override string GetText()
+    {
+        return "My name is Gwachukwu. " + base.GetText();
     }
 }
